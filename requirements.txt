@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+streamlit
+requests
+pydantic
+python-dotenv
+
+pypdf
+chromadb
+sentence-transformers
+rank-bm25
+
+groq
+langsmith

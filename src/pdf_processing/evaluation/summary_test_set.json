@@ -1,0 +1,35 @@
+[
+  {
+    "paper": "attention is all you need",
+    "key_points": [
+      "proposes the Transformer, based only on attention, without recurrence or convolution",
+      "encoder-decoder architecture with stacks of 6 layers",
+      "multi-head self-attention (8 heads) and scaled dot-product attention",
+      "sinusoidal positional encodings to give word order",
+      "28.4 BLEU on WMT 2014 English-to-German and 41.8 BLEU on English-to-French",
+      "trained much faster / at lower cost than previous models (8 P100 GPUs, 3.5 days for the big model)"
+    ]
+  },
+  {
+    "paper": "bert",
+    "key_points": [
+      "BERT pre-trains deep bidirectional representations from unlabeled text",
+      "multi-layer bidirectional Transformer encoder (BERT-base 110M, BERT-large 340M parameters)",
+      "masked language model: 15% of tokens are masked",
+      "next sentence prediction task",
+      "pre-trained on BooksCorpus (800M words) and English Wikipedia (2,500M words)",
+      "fine-tuned with one extra output layer; state of the art results such as GLUE 80.5% and SQuAD v1.1 F1 93.2"
+    ]
+  },
+  {
+    "paper": "llm paper (1)",
+    "key_points": [
+      "LLaMA is a family of foundation language models from 7B to 65B parameters",
+      "trained only on publicly available data (mostly English CommonCrawl, 67%)",
+      "trained on up to 1.4T tokens; smaller models trained longer are cheaper at inference",
+      "architecture changes: pre-normalization with RMSNorm, SwiGLU activation, rotary positional embeddings",
+      "AdamW optimizer with a cosine learning rate schedule",
+      "LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, LLaMA-65B is competitive with Chinchilla and PaLM"
+    ]
+  }
+]

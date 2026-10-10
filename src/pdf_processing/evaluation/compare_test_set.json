@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "papers": [
+      "attention is all you need",
+      "llm paper (1)"
+    ],
+    "question": "Compare how the Transformer and LLaMA encode word positions.",
+    "full": false,
+    "expected": {
+      "attention is all you need": "sinusoidal positional encodings: sine and cosine functions of different frequencies added to the embeddings",
+      "llm paper (1)": "rotary positional embeddings (RoPE) at each layer instead of absolute positional embeddings"
+    },
+    "evidence": {
+      "attention is all you need": [
+        "we use sine and cosine functions of different frequencies"
+      ],
+      "llm paper (1)": [
+        "we remove the absolute positional embeddings"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "papers": [
+      "bert",
+      "llm paper (1)"
+    ],
+    "question": "Compare the activation functions used in BERT and LLaMA.",
+    "full": false,
+    "expected": {
+      "bert": "GELU instead of ReLU",
+      "llm paper (1)": "SwiGLU instead of ReLU"
+    },
+    "evidence": {
+      "bert": [
+        "we use a gelu acti- vation"
+      ],
+      "llm paper (1)": [
+        "we re- place the relu non-linearity by the swiglu"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "papers": [
+      "attention is all you need",
+      "llm paper (1)"
+    ],
+    "question": "Compare the normalization used in the Transformer and LLaMA.",
+    "full": false,
+    "expected": {
+      "attention is all you need": "layer normalization applied after each sub-layer with a residual connection: LayerNorm(x + Sublayer(x))",
+      "llm paper (1)": "pre-normalization: RMSNorm applied to the input of each sub-layer"
+    },
+    "evidence": {
+      "attention is all you need": [
+        "layernorm(x + sublayer(x))"
+      ],
+      "llm paper (1)": [
+        "we use the rmsnorm normalizing func- tion"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "papers": [
+      "attention is all you need",
+      "llm paper (1)"
+    ],
+    "question": "Compare the optimizer and learning-rate schedule of the Transformer and LLaMA.",
+    "full": false,
+    "expected": {
+      "attention is all you need": "Adam (beta1 0.9, beta2 0.98) with a learning rate that increases linearly during warmup and then decreases with the inverse square root of the step number",
+      "llm paper (1)": "AdamW (beta1 0.9, beta2 0.95) with a cosine learning rate schedule ending at 10% of the maximum"
+    },
+    "evidence": {
+      "attention is all you need": [
+        "we used the adam optimizer",
+        "varied the learning rate over the course of training"
+      ],
+      "llm paper (1)": [
+        "we use a cosine learning rate schedule"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "papers": [
+      "bert",
+      "llm paper (1)"
+    ],
+    "question": "Compare the pre-training data of BERT and LLaMA.",
+    "full": false,
+    "expected": {
+      "bert": "BooksCorpus (800M words) and English Wikipedia (2,500M words)",
+      "llm paper (1)": "a mixture of publicly available data, mostly English CommonCrawl (67%), about 1.4T tokens in total"
+    },
+    "evidence": {
+      "bert": [
+        "bookscorpus (800m words)"
+      ],
+      "llm paper (1)": [
+        "english commoncrawl [67%]"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "papers": [
+      "attention is all you need",
+      "bert"
+    ],
+    "question": "Compare the overall architecture of the Transformer and BERT.",
+    "full": false,
+    "expected": {
+      "attention is all you need": "an encoder-decoder structure, with stacks of N = 6 identical layers",
+      "bert": "a multi-layer bidirectional Transformer encoder (encoder only)"
+    },
+    "evidence": {
+      "attention is all you need": [
+        "encoder-decoder structure",
+        "stack of n = 6 identical layers"
+      ],
+      "bert": [
+        "multi-layer bidirectional transformer en-"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "papers": [
+      "attention is all you need",
+      "bert",
+      "llm paper (1)"
+    ],
+    "question": "Compare the hardware used to train the Transformer, BERT and LLaMA.",
+    "full": false,
+    "expected": {
+      "attention is all you need": "one machine with 8 NVIDIA P100 GPUs",
+      "bert": "Cloud TPUs: 4 Cloud TPUs (16 TPU chips) for BERT-base, 16 Cloud TPUs for BERT-large",
+      "llm paper (1)": "2048 A100 GPUs with 80GB of RAM"
+    },
+    "evidence": {
+      "attention is all you need": [
+        "8 nvidia p100"
+      ],
+      "bert": [
+        "4 cloud tpus"
+      ],
+      "llm paper (1)": [
+        "2048 a100"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "papers": [
+      "bert",
+      "llm paper (1)"
+    ],
+    "question": "Give a full comparison of BERT and LLaMA.",
+    "full": true,
+    "expected": {
+      "bert": "goal: pre-train deep bidirectional representations (masked LM + next sentence prediction) for fine-tuning; strong results such as GLUE 80.5%",
+      "llm paper (1)": "goal: foundation language models from 7B to 65B trained only on public data; LLaMA-13B outperforms GPT-3 on most benchmarks"
+    },
+    "evidence": {
+      "bert": [
+        "pushing the glue score to 80.5%"
+      ],
+      "llm paper (1)": [
+        "ranging from 7b to 65b"
+      ]
+    }
+  }
+]

@@ -1,0 +1,464 @@
+{
+    "summary": {
+        "run": "v1_prompt_rerank15",
+        "recall@5": 0.7916666666666666,
+        "mrr@5": 0.5847222222222221,
+        "correctness": 0.7916666666666666,
+        "faithfulness": 1.0,
+        "abstain_accuracy": 1.0,
+        "latency_p50": 11.575894355773926,
+        "latency_p95": 25.010284900665283,
+        "avg_retrieve_time": 1.441249714957343,
+        "avg_rerank_time": 10.387726774922124,
+        "avg_llm_time": 0.9220082759857178
+    },
+    "rows": [
+        {
+            "id": 1,
+            "type": "numeric",
+            "question": "What BLEU score does the Transformer get on WMT 2014 English-to-German?",
+            "answer": "The Transformer achieves a BLEU score of **28.4** on the WMT 2014 English‑to‑German translation task.",
+            "total_time": 27.240736961364746,
+            "timings": {
+                "retrieve": 15.188406705856323,
+                "rerank": 10.234584093093872,
+                "llm": 1.8157389163970947
+            },
+            "rank": 2,
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 2,
+            "type": "numeric",
+            "question": "What BLEU score does the big Transformer reach on English-to-French, and how long did it train?",
+            "answer": "The big Transformer reaches a BLEU score of **41.8** on English‑to‑French, and it trained for **3.5 days** on eight GPUs.",
+            "total_time": 13.108393430709839,
+            "timings": {
+                "retrieve": 0.8030729293823242,
+                "rerank": 10.154391765594482,
+                "llm": 2.1489150524139404
+            },
+            "rank": 2,
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 3,
+            "type": "factual",
+            "question": "What is the model dimension d_model in the base Transformer?",
+            "answer": "The model dimension \\(d_{\\text{model}}\\) in the base Transformer is 512.",
+            "total_time": 14.117375373840332,
+            "timings": {
+                "retrieve": 0.7747452259063721,
+                "rerank": 12.624400854110718,
+                "llm": 0.7182292938232422
+            },
+            "rank": 3,
+            "hit": true,
+            "reciprocal_rank": 0.3333333333333333,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 4,
+            "type": "factual",
+            "question": "How many attention heads does the Transformer use?",
+            "answer": "The Transformer uses 8 attention heads.",
+            "total_time": 11.639476299285889,
+            "timings": {
+                "retrieve": 1.8589441776275635,
+                "rerank": 9.08655595779419,
+                "llm": 0.6839056015014648
+            },
+            "rank": 3,
+            "hit": true,
+            "reciprocal_rank": 0.3333333333333333,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 5,
+            "type": "factual",
+            "question": "How are positional encodings computed in the Transformer?",
+            "answer": "Positional encodings are added to the input embeddings using sine and cosine functions of varying frequencies. For each position `pos` and dimension `i` the encoding is computed as  \n\n\\[\nPE(pos,2i) = \\sin\\!\\left(\\frac{pos}{10000^{\\,2i/d_{\\text{model}}}}\\right), \\qquad\nPE(pos,2i+1) = \\cos\\!\\left(\\frac{pos}{10000^{\\,2i/d_{\\text{model}}}}\\right).\n\\]\n\nThese functions produce a set of sinusoidal values whose wavelengths form a geometric progression from \\(2\\pi\\) to \\(10000 \\cdot 2\\pi\\).",
+            "total_time": 11.354442596435547,
+            "timings": {
+                "retrieve": 0.7976124286651611,
+                "rerank": 9.37572455406189,
+                "llm": 1.175065517425537
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 6,
+            "type": "factual",
+            "question": "What value of label smoothing was used during training?",
+            "answer": "The label smoothing value used during training was ϵls = 0.1.",
+            "total_time": 11.582098484039307,
+            "timings": {
+                "retrieve": 0.6494271755218506,
+                "rerank": 9.735356092453003,
+                "llm": 1.1963093280792236
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 7,
+            "type": "factual",
+            "question": "How long were the base models trained?",
+            "answer": "The base models were trained for 12 hours.",
+            "total_time": 11.331467390060425,
+            "timings": {
+                "retrieve": 0.5430276393890381,
+                "rerank": 10.1197350025177,
+                "llm": 0.6687047481536865
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 0,
+            "faithful": 1
+        },
+        {
+            "id": 8,
+            "type": "factual",
+            "question": "Where is dropout applied in the Transformer?",
+            "answer": "Dropout is applied to the output of each sub‑layer before it is added to the sub‑layer input and normalized, and it is also applied to the sums of the embeddings and the positional encodings in both the encoder and decoder stacks.",
+            "total_time": 9.932417154312134,
+            "timings": {
+                "retrieve": 0.5486910343170166,
+                "rerank": 8.517823934555054,
+                "llm": 0.860896110534668
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 9,
+            "type": "factual",
+            "question": "What percentage of tokens does BERT mask during pre-training?",
+            "answer": "BERT masks 15 % of tokens during pre‑training.",
+            "total_time": 10.461219310760498,
+            "timings": {
+                "retrieve": 0.8521242141723633,
+                "rerank": 8.790754318237305,
+                "llm": 0.8163232803344727
+            },
+            "rank": 3,
+            "hit": true,
+            "reciprocal_rank": 0.3333333333333333,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 10,
+            "type": "multi-part",
+            "question": "When a token is chosen for masking in BERT, how often is it replaced with [MASK], a random token, or kept unchanged?",
+            "answer": "When a token is selected for masking in BERT, it is replaced with the [MASK] token 80 % of the time, replaced with a random token 10 % of the time, and kept unchanged 10 % of the time.",
+            "total_time": 13.16848373413086,
+            "timings": {
+                "retrieve": 2.0341646671295166,
+                "rerank": 10.356410503387451,
+                "llm": 0.7250881195068359
+            },
+            "rank": 5,
+            "hit": true,
+            "reciprocal_rank": 0.2,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 11,
+            "type": "factual",
+            "question": "What two tasks is BERT pre-trained on?",
+            "answer": "BERT is pre‑trained on two unsupervised tasks: **Masked Language Modeling (MLM)** and **Next Sentence Prediction (NSP)**.",
+            "total_time": 8.57278561592102,
+            "timings": {
+                "retrieve": 0.6876723766326904,
+                "rerank": 7.026583671569824,
+                "llm": 0.8565146923065186
+            },
+            "rank": null,
+            "hit": false,
+            "reciprocal_rank": 0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 12,
+            "type": "numeric",
+            "question": "What data was BERT pre-trained on and how big is it?",
+            "answer": "BERT was pre‑trained on the BooksCorpus (800 M words) and English Wikipedia (2 500 M words), for a total of 3 300 M words.",
+            "total_time": 10.427431106567383,
+            "timings": {
+                "retrieve": 1.29471755027771,
+                "rerank": 8.20707368850708,
+                "llm": 0.9256398677825928
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 13,
+            "type": "factual",
+            "question": "What tokenizer and vocabulary size does BERT use?",
+            "answer": "The provided context does not contain enough information.",
+            "total_time": 14.84482192993164,
+            "timings": {
+                "retrieve": 1.4096624851226807,
+                "rerank": 11.806473970413208,
+                "llm": 1.6277999877929688
+            },
+            "rank": null,
+            "hit": false,
+            "reciprocal_rank": 0,
+            "correct": 0,
+            "faithful": 1
+        },
+        {
+            "id": 14,
+            "type": "multi-part",
+            "question": "What are the sizes of BERT-base and BERT-large?",
+            "answer": "BERT‑BASE has 12 layers, a hidden size of 768, 12 attention heads, and 110 M parameters.  \nBERT‑LARGE has 24 layers, a hidden size of 1024, 16 attention heads, and 340 M parameters.",
+            "total_time": 19.147268295288086,
+            "timings": {
+                "retrieve": 0.6118934154510498,
+                "rerank": 17.69802951812744,
+                "llm": 0.8373453617095947
+            },
+            "rank": 3,
+            "hit": true,
+            "reciprocal_rank": 0.3333333333333333,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 15,
+            "type": "factual",
+            "question": "Which activation function does BERT use?",
+            "answer": "The provided context does not contain enough information.",
+            "total_time": 11.068474054336548,
+            "timings": {
+                "retrieve": 0.8393857479095459,
+                "rerank": 9.506215810775757,
+                "llm": 0.6846323013305664
+            },
+            "rank": null,
+            "hit": false,
+            "reciprocal_rank": 0,
+            "correct": 0,
+            "faithful": 1
+        },
+        {
+            "id": 16,
+            "type": "numeric",
+            "question": "What GLUE score and SQuAD v1.1 F1 does BERT achieve?",
+            "answer": "BERT achieves a GLUE score of **80.5 %** and a SQuAD v1.1 Test F1 of **93.2**.",
+            "total_time": 25.010284900665283,
+            "timings": {
+                "retrieve": 1.371140480041504,
+                "rerank": 22.499980211257935,
+                "llm": 1.1351377964019775
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 17,
+            "type": "factual",
+            "question": "What range of model sizes does LLaMA include?",
+            "answer": "LLaMA includes models ranging from 7 B to 65 B parameters.",
+            "total_time": 15.98978853225708,
+            "timings": {
+                "retrieve": 1.2625892162322998,
+                "rerank": 14.042505979537964,
+                "llm": 0.6846933364868164
+            },
+            "rank": null,
+            "hit": false,
+            "reciprocal_rank": 0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 18,
+            "type": "factual",
+            "question": "Which normalization function does LLaMA use?",
+            "answer": "LLaMA uses the **RMSNorm** normalizing function.",
+            "total_time": 12.49846887588501,
+            "timings": {
+                "retrieve": 0.7914109230041504,
+                "rerank": 10.97982144355774,
+                "llm": 0.7232096195220947
+            },
+            "rank": 2,
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 19,
+            "type": "factual",
+            "question": "What activation function replaces ReLU in LLaMA?",
+            "answer": "The ReLU non‑linearity in LLaMA is replaced by the **SwiGLU** activation function.",
+            "total_time": 8.278193712234497,
+            "timings": {
+                "retrieve": 0.6088957786560059,
+                "rerank": 6.995509624481201,
+                "llm": 0.6707556247711182
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 20,
+            "type": "factual",
+            "question": "What positional embeddings does LLaMA use?",
+            "answer": "The provided context does not contain enough information.",
+            "total_time": 10.923795700073242,
+            "timings": {
+                "retrieve": 0.593785285949707,
+                "rerank": 9.589344501495361,
+                "llm": 0.7406659126281738
+            },
+            "rank": null,
+            "hit": false,
+            "reciprocal_rank": 0,
+            "correct": 0,
+            "faithful": 1
+        },
+        {
+            "id": 21,
+            "type": "multi-part",
+            "question": "Which optimizer and learning-rate schedule does LLaMA use?",
+            "answer": "LLaMA is trained with the AdamW optimizer and uses a cosine learning‑rate schedule, where the final learning rate is set to 10 % of the maximum learning rate.",
+            "total_time": 11.575894355773926,
+            "timings": {
+                "retrieve": 0.5628101825714111,
+                "rerank": 10.00019121170044,
+                "llm": 1.0128929615020752
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 0,
+            "faithful": 1
+        },
+        {
+            "id": 22,
+            "type": "numeric",
+            "question": "How long does training the 65B LLaMA model on 1.4T tokens take?",
+            "answer": "Training the 65B LLaMA model on 1.4 T tokens takes approximately **21 days**.",
+            "total_time": 9.017104387283325,
+            "timings": {
+                "retrieve": 0.6957354545593262,
+                "rerank": 7.6359617710113525,
+                "llm": 0.6746156215667725
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 23,
+            "type": "numeric",
+            "question": "What share of LLaMA's training data comes from English CommonCrawl?",
+            "answer": "The share of LLaMA’s training data that comes from English CommonCrawl is **67 %**.",
+            "total_time": 12.412648916244507,
+            "timings": {
+                "retrieve": 0.7046599388122559,
+                "rerank": 11.072255373001099,
+                "llm": 0.6357336044311523
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 24,
+            "type": "factual",
+            "question": "Which model does LLaMA-13B outperform on most benchmarks?",
+            "answer": "LLaMA‑13B outperforms **GPT‑3** on most benchmarks.",
+            "total_time": 11.466075897216797,
+            "timings": {
+                "retrieve": 0.7131001949310303,
+                "rerank": 10.047418117523193,
+                "llm": 0.7055575847625732
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 25,
+            "type": "unanswerable",
+            "question": "How much did it cost in US dollars to pre-train BERT?",
+            "answer": "The provided context does not contain enough information.",
+            "total_time": 6.9387524127960205,
+            "timings": {
+                "retrieve": 0.5555448532104492,
+                "rerank": 5.881934404373169,
+                "llm": 0.4955329895019531
+            },
+            "abstained": true
+        },
+        {
+            "id": 26,
+            "type": "unanswerable",
+            "question": "What accuracy does the Transformer get on ImageNet?",
+            "answer": "The provided context does not contain enough information.",
+            "total_time": 8.721531867980957,
+            "timings": {
+                "retrieve": 0.814856767654419,
+                "rerank": 6.938699245452881,
+                "llm": 0.9659478664398193
+            },
+            "abstained": true
+        },
+        {
+            "id": 27,
+            "type": "unanswerable",
+            "question": "How many GPUs were used to train LLaMA-2?",
+            "answer": "The provided context does not contain enough information.",
+            "total_time": 13.606510877609253,
+            "timings": {
+                "retrieve": 1.345665454864502,
+                "rerank": 11.54488730430603,
+                "llm": 0.7083723545074463
+            },
+            "abstained": true
+        }
+    ]
+}

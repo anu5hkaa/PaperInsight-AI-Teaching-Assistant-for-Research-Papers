@@ -1,0 +1,390 @@
+[
+  {
+    "id": 1,
+    "paper": "attention is all you need",
+    "type": "numeric",
+    "question": "What BLEU score does the Transformer get on WMT 2014 English-to-German?",
+    "answer": "28.4 BLEU.",
+    "evidence": [
+      "our model achieves 28.4 bleu"
+    ]
+  },
+  {
+    "id": 2,
+    "paper": "attention is all you need",
+    "type": "numeric",
+    "question": "What BLEU score does the big Transformer reach on English-to-French, and how long did it train?",
+    "answer": "41.8 BLEU after training for 3.5 days on eight GPUs.",
+    "evidence": [
+      "bleu score of 41.8 after training for 3.5 days"
+    ]
+  },
+  {
+    "id": 3,
+    "paper": "attention is all you need",
+    "type": "factual",
+    "question": "What is the model dimension d_model in the base Transformer?",
+    "answer": "d_model = 512.",
+    "evidence": [
+      "dmodel = 512"
+    ]
+  },
+  {
+    "id": 4,
+    "paper": "attention is all you need",
+    "type": "factual",
+    "question": "How many attention heads does the Transformer use?",
+    "answer": "8 parallel attention heads (h = 8).",
+    "evidence": [
+      "we employ h = 8 parallel attention layers"
+    ]
+  },
+  {
+    "id": 5,
+    "paper": "attention is all you need",
+    "type": "factual",
+    "question": "How are positional encodings computed in the Transformer?",
+    "answer": "With sine and cosine functions of different frequencies.",
+    "evidence": [
+      "we use sine and cosine functions of different frequencies"
+    ]
+  },
+  {
+    "id": 6,
+    "paper": "attention is all you need",
+    "type": "factual",
+    "question": "What value of label smoothing was used during training?",
+    "answer": "Label smoothing of 0.1.",
+    "evidence": [
+      "we employed label smoothing of value"
+    ]
+  },
+  {
+    "id": 7,
+    "paper": "attention is all you need",
+    "type": "factual",
+    "question": "How long were the base models trained?",
+    "answer": "100,000 steps, about 12 hours.",
+    "evidence": [
+      "100,000 steps or 12 hours"
+    ]
+  },
+  {
+    "id": 8,
+    "paper": "attention is all you need",
+    "type": "factual",
+    "question": "Where is dropout applied in the Transformer?",
+    "answer": "To the output of each sub-layer before it is added to the sub-layer input and normalized, and to the sums of embeddings and positional encodings; rate 0.1 for the base model.",
+    "evidence": [
+      "we apply dropout [33] to the output of each sub-layer"
+    ]
+  },
+  {
+    "id": 9,
+    "paper": "bert",
+    "type": "factual",
+    "question": "What percentage of tokens does BERT mask during pre-training?",
+    "answer": "15% of WordPiece tokens in each sequence.",
+    "evidence": [
+      "we mask 15% of all wordpiece",
+      "15% of the token positions"
+    ]
+  },
+  {
+    "id": 10,
+    "paper": "bert",
+    "type": "multi-part",
+    "question": "When a token is chosen for masking in BERT, how often is it replaced with [MASK], a random token, or kept unchanged?",
+    "answer": "[MASK] 80% of the time, a random token 10%, unchanged 10%.",
+    "evidence": [
+      "the [mask] token 80% of the time"
+    ]
+  },
+  {
+    "id": 11,
+    "paper": "bert",
+    "type": "factual",
+    "question": "What two tasks is BERT pre-trained on?",
+    "answer": "Masked language modeling (Masked LM) and next sentence prediction (NSP).",
+    "evidence": [
+      "we also use a “next sentence prediction” task"
+    ]
+  },
+  {
+    "id": 12,
+    "paper": "bert",
+    "type": "numeric",
+    "question": "What data was BERT pre-trained on and how big is it?",
+    "answer": "BooksCorpus (800M words) and English Wikipedia (2,500M words).",
+    "evidence": [
+      "bookscorpus (800m words)"
+    ]
+  },
+  {
+    "id": 13,
+    "paper": "bert",
+    "type": "factual",
+    "question": "What tokenizer and vocabulary size does BERT use?",
+    "answer": "WordPiece embeddings with a 30,000 token vocabulary.",
+    "evidence": [
+      "with a 30,000 token vocabulary"
+    ]
+  },
+  {
+    "id": 14,
+    "paper": "bert",
+    "type": "multi-part",
+    "question": "What are the sizes of BERT-base and BERT-large?",
+    "answer": "BERT-base: L=12, H=768, A=12, 110M parameters. BERT-large: L=24, H=1024, A=16, 340M parameters.",
+    "evidence": [
+      "total parameters=340m"
+    ]
+  },
+  {
+    "id": 15,
+    "paper": "bert",
+    "type": "factual",
+    "question": "Which activation function does BERT use?",
+    "answer": "GELU instead of ReLU.",
+    "evidence": [
+      "we use a gelu acti- vation"
+    ]
+  },
+  {
+    "id": 16,
+    "paper": "bert",
+    "type": "numeric",
+    "question": "What GLUE score and SQuAD v1.1 F1 does BERT achieve?",
+    "answer": "GLUE 80.5% and SQuAD v1.1 test F1 93.2.",
+    "evidence": [
+      "pushing the glue score to 80.5%"
+    ]
+  },
+  {
+    "id": 17,
+    "paper": "llm paper (1)",
+    "type": "factual",
+    "question": "What range of model sizes does LLaMA include?",
+    "answer": "From 7B to 65B parameters.",
+    "evidence": [
+      "ranging from 7b to 65b"
+    ]
+  },
+  {
+    "id": 18,
+    "paper": "llm paper (1)",
+    "type": "factual",
+    "question": "Which normalization function does LLaMA use?",
+    "answer": "RMSNorm, applied to the input of each sub-layer (pre-normalization).",
+    "evidence": [
+      "we use the rmsnorm normalizing func- tion"
+    ]
+  },
+  {
+    "id": 19,
+    "paper": "llm paper (1)",
+    "type": "factual",
+    "question": "What activation function replaces ReLU in LLaMA?",
+    "answer": "SwiGLU.",
+    "evidence": [
+      "we re- place the relu non-linearity by the swiglu"
+    ]
+  },
+  {
+    "id": 20,
+    "paper": "llm paper (1)",
+    "type": "factual",
+    "question": "What positional embeddings does LLaMA use?",
+    "answer": "Rotary positional embeddings (RoPE) instead of absolute positional embeddings.",
+    "evidence": [
+      "we remove the absolute positional embeddings"
+    ]
+  },
+  {
+    "id": 21,
+    "paper": "llm paper (1)",
+    "type": "multi-part",
+    "question": "Which optimizer and learning-rate schedule does LLaMA use?",
+    "answer": "AdamW (beta1 = 0.9, beta2 = 0.95) with a cosine learning-rate schedule ending at 10% of the maximum.",
+    "evidence": [
+      "we use a cosine learning rate schedule"
+    ]
+  },
+  {
+    "id": 22,
+    "paper": "llm paper (1)",
+    "type": "numeric",
+    "question": "How long does training the 65B LLaMA model on 1.4T tokens take?",
+    "answer": "About 21 days, processing ~380 tokens/sec/GPU on 2048 A100 GPUs.",
+    "evidence": [
+      "takes approximately 21 days"
+    ]
+  },
+  {
+    "id": 23,
+    "paper": "llm paper (1)",
+    "type": "numeric",
+    "question": "What share of LLaMA's training data comes from English CommonCrawl?",
+    "answer": "67%.",
+    "evidence": [
+      "english commoncrawl [67%]"
+    ]
+  },
+  {
+    "id": 24,
+    "paper": "llm paper (1)",
+    "type": "factual",
+    "question": "Which model does LLaMA-13B outperform on most benchmarks?",
+    "answer": "GPT-3 (175B).",
+    "evidence": [
+      "outperforms gpt-3"
+    ]
+  },
+  {
+    "id": 25,
+    "paper": "bert",
+    "type": "unanswerable",
+    "question": "How much did it cost in US dollars to pre-train BERT?",
+    "answer": "NOT_IN_PAPER",
+    "evidence": []
+  },
+  {
+    "id": 26,
+    "paper": "attention is all you need",
+    "type": "unanswerable",
+    "question": "What accuracy does the Transformer get on ImageNet?",
+    "answer": "NOT_IN_PAPER",
+    "evidence": []
+  },
+  {
+    "id": 27,
+    "paper": "llm paper (1)",
+    "type": "unanswerable",
+    "question": "How many GPUs were used to train LLaMA-2?",
+    "answer": "NOT_IN_PAPER",
+    "evidence": []
+  },
+  {
+    "id": 28,
+    "paper": "attention is all you need",
+    "type": "explain",
+    "question": "Why does the Transformer use multi-head attention instead of a single attention head?",
+    "answer": "Key points: multiple heads let the model jointly attend to information from different representation subspaces at different positions; with a single head, averaging inhibits this; total cost is similar to single-head attention with full dimensionality.",
+    "evidence": [
+      "multi-head attention allows the model to jointly attend to information from different representation subspaces"
+    ]
+  },
+  {
+    "id": 29,
+    "paper": "attention is all you need",
+    "type": "explain",
+    "question": "Why is the dot product scaled by 1/sqrt(dk) in scaled dot-product attention?",
+    "answer": "Key points: for large dk the dot products grow large in magnitude; this pushes the softmax into regions with extremely small gradients; scaling by 1/sqrt(dk) counteracts this.",
+    "evidence": [
+      "for large values of dk, the dot products grow large in magnitude"
+    ]
+  },
+  {
+    "id": 30,
+    "paper": "attention is all you need",
+    "type": "explain",
+    "question": "Why did the authors choose self-attention instead of recurrent layers?",
+    "answer": "Key points: lower total computational complexity per layer; more computation can be parallelized (constant number of sequential operations); shorter path length between long-range dependencies makes them easier to learn.",
+    "evidence": [
+      "one is the total computational complexity per layer",
+      "path length between long-range dependencies"
+    ]
+  },
+  {
+    "id": 31,
+    "paper": "attention is all you need",
+    "type": "explain",
+    "question": "Explain what the masking in the decoder self-attention does and why it is needed.",
+    "answer": "Key points: it prevents positions from attending to subsequent (future) positions; this preserves the auto-regressive property so a prediction depends only on known earlier outputs; implemented by masking out illegal connections (setting them to -infinity) before the softmax.",
+    "evidence": [
+      "prevent leftward information flow in the decoder"
+    ]
+  },
+  {
+    "id": 32,
+    "paper": "bert",
+    "type": "explain",
+    "question": "Why can't BERT be trained with a standard left-to-right language model if it wants to be bidirectional?",
+    "answer": "Key points: with standard conditional language modeling, bidirectional conditioning would let each word indirectly see itself, so the model could trivially predict the target word; that is why BERT uses the masked language model instead.",
+    "evidence": [
+      "and the model could trivially predict the target word"
+    ]
+  },
+  {
+    "id": 33,
+    "paper": "bert",
+    "type": "explain",
+    "question": "Why does BERT not always replace the chosen tokens with [MASK]?",
+    "answer": "Key points: the [MASK] token never appears during fine-tuning, which creates a mismatch between pre-training and fine-tuning; to reduce this mismatch, chosen tokens are replaced with [MASK] 80% of the time, a random token 10%, and kept unchanged 10%.",
+    "evidence": [
+      "creating a mismatch between pre-training and",
+      "the purpose of the masking strategies is to reduce the mismatch"
+    ]
+  },
+  {
+    "id": 34,
+    "paper": "bert",
+    "type": "explain",
+    "question": "What is the purpose of the next sentence prediction task in BERT?",
+    "answer": "Key points: many downstream tasks such as question answering and natural language inference depend on understanding the relationship between two sentences; this is not directly captured by language modeling; NSP trains the model to understand sentence relationships.",
+    "evidence": [
+      "understanding the rela- tionship between two sentences"
+    ]
+  },
+  {
+    "id": 35,
+    "paper": "bert",
+    "type": "explain",
+    "question": "Explain the difference between the feature-based and the fine-tuning approaches for using pre-trained language representations.",
+    "answer": "Key points: feature-based approaches (like ELMo) use task-specific architectures that include the pre-trained representations as additional features; fine-tuning approaches (like OpenAI GPT) add minimal task-specific parameters and fine-tune all pre-trained parameters on the downstream task.",
+    "evidence": [
+      "there are two existing strategies for apply-"
+    ]
+  },
+  {
+    "id": 36,
+    "paper": "llm paper (1)",
+    "type": "explain",
+    "question": "Why did the LLaMA authors train smaller models on more tokens instead of making the models bigger?",
+    "answer": "Key points: the target is a given inference budget; the preferred model is not the fastest to train but the fastest at inference; a smaller model trained longer is cheaper at inference; performance of the 7B model kept improving even after 1T tokens.",
+    "evidence": [
+      "the preferred model is not the fastest to train but the fastest at inference"
+    ]
+  },
+  {
+    "id": 37,
+    "paper": "llm paper (1)",
+    "type": "explain",
+    "question": "Why does LLaMA normalize the input of each transformer sub-layer?",
+    "answer": "Key points: this pre-normalization (inspired by GPT-3) improves training stability; it normalizes the input of each sub-layer instead of the output; it uses the RMSNorm function.",
+    "evidence": [
+      "to improve the training stability, we normalize the input of each transformer sub-layer"
+    ]
+  },
+  {
+    "id": 38,
+    "paper": "llm paper (1)",
+    "type": "explain",
+    "question": "How did the LLaMA authors make training faster and more memory efficient?",
+    "answer": "Key points: an efficient causal multi-head attention implementation (xformers) that does not store attention weights and does not compute masked key/query scores; fewer activations recomputed in the backward pass through checkpointing (saving expensive activations); model and sequence parallelism; overlapping computation and GPU communication.",
+    "evidence": [
+      "we make several optimizations to improve the train-",
+      "this is achieved by not storing the attention weights"
+    ]
+  },
+  {
+    "id": 39,
+    "paper": "llm paper (1)",
+    "type": "explain",
+    "question": "Why did LLaMA use only publicly available training data?",
+    "answer": "Key points: using only publicly available data makes the work compatible with open-sourcing, unlike models trained on proprietary or undocumented data.",
+    "evidence": [
+      "compatible with open sourcing"
+    ]
+  }
+]

@@ -1,0 +1,437 @@
+{
+    "summary": {
+        "run": "final",
+        "recall@5": 0.8333333333333334,
+        "mrr@5": 0.5986111111111111,
+        "correctness": 0.9583333333333334,
+        "faithfulness": 0.9583333333333334,
+        "abstain_accuracy": 1.0,
+        "latency_p50": 1.5161702632904053,
+        "latency_p95": 6.648839473724365,
+        "avg_retrieve_time": 0.9626790505868418,
+        "avg_rerank_time": null,
+        "avg_llm_time": 1.4428480289600514
+    },
+    "rows": [
+        {
+            "id": 1,
+            "type": "numeric",
+            "question": "What BLEU score does the Transformer get on WMT 2014 English-to-German?",
+            "answer": "Answer: The Transformer achieves a BLEU score of **28.4** on the WMT 2014 English‑to‑German translation task.  \n\nExplanation: The paper reports that the big Transformer model reaches 28.4 BLEU on this benchmark, surpassing previous state‑of‑the‑art models.  \n\nSources: (6.1 Machine Translation, page 8); (Abstract, page 1); (Table 2, page 8).",
+            "total_time": 11.964714765548706,
+            "timings": {
+                "retrieve": 10.456570148468018,
+                "llm": 1.3796977996826172
+            },
+            "rank": 2,
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 2,
+            "type": "numeric",
+            "question": "What BLEU score does the big Transformer reach on English-to-French, and how long did it train?",
+            "answer": "Answer: The big Transformer reaches a BLEU score of **41.8** on English‑to‑French and was trained for **3.5 days** on eight GPUs.  \n\nExplanation: The abstract states the model achieves a 41.8 BLEU after 3.5 days on eight GPUs, and Table 2 lists the big Transformer’s EN‑FR BLEU as 41.8.  \n\nSources: (Abstract, page 1); (Table 2, page 8).",
+            "total_time": 1.8482754230499268,
+            "timings": {
+                "retrieve": 0.7948644161224365,
+                "llm": 1.0513999462127686
+            },
+            "rank": 3,
+            "hit": true,
+            "reciprocal_rank": 0.3333333333333333,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 3,
+            "type": "factual",
+            "question": "What is the model dimension d_model in the base Transformer?",
+            "answer": "Answer: The base Transformer uses a model dimension \\(d_{\\text{model}} = 512\\).\n\nExplanation: Table 3 lists the base model configuration, where the column labeled “d model” has the value 512 for the base Transformer. This indicates that each token embedding and positional encoding vector has 512 dimensions. (Table 3, page 8)",
+            "total_time": 2.1572673320770264,
+            "timings": {
+                "retrieve": 0.5744938850402832,
+                "llm": 1.5827734470367432
+            },
+            "rank": null,
+            "hit": false,
+            "reciprocal_rank": 0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 4,
+            "type": "factual",
+            "question": "How many attention heads does the Transformer use?",
+            "answer": "Answer: The Transformer uses 8 attention heads.  \n\nExplanation: The paper states that the model employs \\(h = 8\\) parallel attention layers, or heads, in its multi‑head attention mechanism.  \n\nSources: (3.2.2 Multi-Head Attention, page 5)",
+            "total_time": 1.191105604171753,
+            "timings": {
+                "retrieve": 0.5056805610656738,
+                "llm": 0.6854250431060791
+            },
+            "rank": 2,
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 5,
+            "type": "factual",
+            "question": "How are positional encodings computed in the Transformer?",
+            "answer": "Answer: Positional encodings are added to the input embeddings using sine and cosine functions of varying frequencies:  \n\\(PE_{\\text{pos},2i} = \\sin\\!\\left(\\frac{\\text{pos}}{10000^{\\,2i/d_{\\text{model}}}}\\right)\\) and  \n\\(PE_{\\text{pos},2i+1} = \\cos\\!\\left(\\frac{\\text{pos}}{10000^{\\,2i/d_{\\text{model}}}}\\right)\\),  \nwhere *pos* is the token position and *i* indexes the embedding dimension.  \n\nExplanation: Each dimension of the encoding is a sinusoid, and the wavelengths form a geometric progression from \\(2\\pi\\) to \\(10000\\cdot2\\pi\\). This design lets the model learn relative positions easily, as any fixed offset can be expressed linearly in terms of the encodings.  \n\nSources: (3.5 Positional Encoding, page 6).",
+            "total_time": 6.648839473724365,
+            "timings": {
+                "retrieve": 0.5387494564056396,
+                "llm": 6.108078241348267
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 6,
+            "type": "factual",
+            "question": "What value of label smoothing was used during training?",
+            "answer": "Answer: The label smoothing value used during training was ϵls = 0.1.  \n\nExplanation: The paper explicitly states that label smoothing of value ϵls = 0.1 was employed during training.  \n\nSources: (5.4 Regularization, page 8)",
+            "total_time": 6.038111209869385,
+            "timings": {
+                "retrieve": 0.4834609031677246,
+                "llm": 5.55465030670166
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 7,
+            "type": "factual",
+            "question": "How long were the base models trained?",
+            "answer": "Answer: The base models were trained for 12 hours (100,000 steps).  \n\nExplanation: The paper states that each training step for the base models took about 0.4 seconds and that the base models were trained for a total of 100,000 steps, which amounts to 12 hours.  \n\nSources: (5.2 Hardware and Schedule, page 7).",
+            "total_time": 3.277082681655884,
+            "timings": {
+                "retrieve": 0.4715554714202881,
+                "llm": 2.8055272102355957
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 8,
+            "type": "factual",
+            "question": "Where is dropout applied in the Transformer?",
+            "answer": "Answer: Dropout is applied to the output of every sub‑layer (before the residual addition and layer‑norm) and also to the summed embeddings plus positional encodings in both the encoder and decoder stacks (Pdrop = 0.1 for the base model).  \n\nExplanation: The paper states that dropout is used on each sub‑layer’s output prior to adding it back to the input and normalizing. It also drops out the combined embeddings and positional encodings in both stacks. This regularizes the model during training.  \n\nSources: (5.4 Regularization, page 8).",
+            "total_time": 4.7336509227752686,
+            "timings": {
+                "retrieve": 0.8812122344970703,
+                "llm": 3.8504114151000977
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 9,
+            "type": "factual",
+            "question": "What percentage of tokens does BERT mask during pre-training?",
+            "answer": "Answer: BERT masks 15% of all WordPiece tokens during pre‑training.  \n\nExplanation: The paper states that in all experiments the model masks 15% of the tokens in each sequence at random.  \n\nSources: (3.1 Pre-training BERT, page 4)",
+            "total_time": 2.9755563735961914,
+            "timings": {
+                "retrieve": 0.5907139778137207,
+                "llm": 2.3848423957824707
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 10,
+            "type": "multi-part",
+            "question": "When a token is chosen for masking in BERT, how often is it replaced with [MASK], a random token, or kept unchanged?",
+            "answer": "Answer: When a token is selected for masking, it is replaced with the [MASK] token 80 % of the time, replaced with a random token 10 % of the time, and left unchanged 10 % of the time.  \n\nExplanation: BERT’s masking procedure first chooses 15 % of tokens at random. For each chosen token, the training data generator applies the three strategies with probabilities 80 %, 10 %, and 10 % respectively, as described in the pre‑training section and confirmed in the ablation study.  \n\nSources: (3.1 Pre-training BERT, page 4); (C.2 Ablation for Different Masking, page 16).",
+            "total_time": 1.534888744354248,
+            "timings": {
+                "retrieve": 0.7206766605377197,
+                "llm": 0.8142120838165283
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 11,
+            "type": "factual",
+            "question": "What two tasks is BERT pre-trained on?",
+            "answer": "Answer: BERT is pre‑trained on Masked Language Modeling (MLM) and Next Sentence Prediction (NSP).  \n\nExplanation: The pre‑training phase of BERT includes two tasks: MLM, where tokens are masked and the model learns to predict them, and NSP, where the model learns to predict whether a second sentence follows the first. (3.1 Pre‑training BERT, page 4)",
+            "total_time": 1.558772087097168,
+            "timings": {
+                "retrieve": 0.5290374755859375,
+                "llm": 1.0277228355407715
+            },
+            "rank": null,
+            "hit": false,
+            "reciprocal_rank": 0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 12,
+            "type": "numeric",
+            "question": "What data was BERT pre-trained on and how big is it?",
+            "answer": "Answer: BERT was pre‑trained on the BooksCorpus (800 M words) and Wikipedia (2,500 M words), a total of 3.3 B words.  \n\nExplanation: The paper states that BERT’s pre‑training corpus consists of the BooksCorpus and Wikipedia, with the respective word counts of 800 M and 2,500 M, giving a combined size of 3,300 M words.  \n\nSources: (A.4 Comparison of BERT, ELMo ,and, page 14)",
+            "total_time": 1.3451788425445557,
+            "timings": {
+                "retrieve": 0.5991566181182861,
+                "llm": 0.7440085411071777
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 13,
+            "type": "factual",
+            "question": "What tokenizer and vocabulary size does BERT use?",
+            "answer": "The provided context does not contain enough information.",
+            "total_time": 1.1201794147491455,
+            "timings": {
+                "retrieve": 0.4629037380218506,
+                "llm": 0.6572756767272949
+            },
+            "rank": null,
+            "hit": false,
+            "reciprocal_rank": 0,
+            "correct": 0,
+            "faithful": 1
+        },
+        {
+            "id": 14,
+            "type": "multi-part",
+            "question": "What are the sizes of BERT-base and BERT-large?",
+            "answer": "Answer: BERT‑BASE has 110 million parameters (12 layers, hidden size 768, 12 heads) and BERT‑LARGE has 340 million parameters (24 layers, hidden size 1024, 16 heads).  \n\nExplanation: The paper lists the exact configurations for the two standard models, giving both the parameter counts and the layer/hidden/head numbers.  \n\nSources: (3 BERT, page 3) and (5.2 Effect of Model Size, page 8).",
+            "total_time": 1.5161702632904053,
+            "timings": {
+                "retrieve": 0.6643149852752686,
+                "llm": 0.8518552780151367
+            },
+            "rank": 4,
+            "hit": true,
+            "reciprocal_rank": 0.25,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 15,
+            "type": "factual",
+            "question": "Which activation function does BERT use?",
+            "answer": "Answer: BERT uses the GELU (Gaussian Error Linear Unit) activation function.  \n\nExplanation: The paper states that BERT adopts a GELU activation rather than the standard ReLU, following the design choice of OpenAI GPT.  \n\nSources: (A.2 Pre-training Procedure, page 13)",
+            "total_time": 1.1363091468811035,
+            "timings": {
+                "retrieve": 0.5121862888336182,
+                "llm": 0.6241228580474854
+            },
+            "rank": 3,
+            "hit": true,
+            "reciprocal_rank": 0.3333333333333333,
+            "correct": 1,
+            "faithful": 0
+        },
+        {
+            "id": 16,
+            "type": "numeric",
+            "question": "What GLUE score and SQuAD v1.1 F1 does BERT achieve?",
+            "answer": "Answer: BERT achieves a GLUE score of **80.5 %** and a SQuAD v1.1 Test F1 of **93.2 %**.  \n\nExplanation: The abstract reports that BERT pushes the overall GLUE benchmark to 80.5 % and attains a SQuAD v1.1 Test F1 of 93.2 %.  \n\nSources: (bert | Abstract | page 1)",
+            "total_time": 1.6400415897369385,
+            "timings": {
+                "retrieve": 0.6872289180755615,
+                "llm": 0.9508013725280762
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 17,
+            "type": "factual",
+            "question": "What range of model sizes does LLaMA include?",
+            "answer": "Answer: LLaMA includes models ranging from 7 B to 65 B parameters.  \n\nExplanation: The paper states that the LLaMA series covers sizes from 7 B up to 65 B parameters, providing competitive performance across this range.  \n\nSources: (1) Introduction, page 1.",
+            "total_time": 1.3315682411193848,
+            "timings": {
+                "retrieve": 0.5824594497680664,
+                "llm": 0.7470805644989014
+            },
+            "rank": null,
+            "hit": false,
+            "reciprocal_rank": 0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 18,
+            "type": "factual",
+            "question": "Which normalization function does LLaMA use?",
+            "answer": "Answer: LLaMA uses the RMSNorm normalizing function.  \n\nExplanation: The architecture section states that LLaMA normalizes the input of each transformer sub‑layer using RMSNorm, a function introduced by Zhang and Sennrich (2019).  \n\nSources: (2.2 Architecture, page 3)",
+            "total_time": 1.6443126201629639,
+            "timings": {
+                "retrieve": 0.8686890602111816,
+                "llm": 0.7638816833496094
+            },
+            "rank": 5,
+            "hit": true,
+            "reciprocal_rank": 0.2,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 19,
+            "type": "factual",
+            "question": "What activation function replaces ReLU in LLaMA?",
+            "answer": "Answer: LLaMA replaces the ReLU non‑linearity with the SwiGLU activation function.  \n\nExplanation: The architecture section notes that LLaMA adopts the SwiGLU activation, a replacement for ReLU that was introduced in PaLM to improve performance. (2.2 Architecture, page 3)",
+            "total_time": 1.2389771938323975,
+            "timings": {
+                "retrieve": 0.4953138828277588,
+                "llm": 0.7416508197784424
+            },
+            "rank": 4,
+            "hit": true,
+            "reciprocal_rank": 0.25,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 20,
+            "type": "factual",
+            "question": "What positional embeddings does LLaMA use?",
+            "answer": "Answer: LLaMA uses rotary positional embeddings (RoPE) and does not employ absolute positional embeddings.  \n\nExplanation: The architecture section states that LLaMA removes absolute positional embeddings and instead adds rotary positional embeddings at each layer of the network.  \n\nSources: (2.2 Architecture, page 3)",
+            "total_time": 1.1327409744262695,
+            "timings": {
+                "retrieve": 0.5110538005828857,
+                "llm": 0.6216871738433838
+            },
+            "rank": 2,
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 21,
+            "type": "multi-part",
+            "question": "Which optimizer and learning-rate schedule does LLaMA use?",
+            "answer": "Answer: LLaMA is trained with the AdamW optimizer and a cosine learning‑rate schedule, where the final learning rate is 10 % of the maximum.  \n\nExplanation: The paper states that the models use AdamW (Loshchilov & Hutter, 2017) with β1 = 0.9 and β2 = 0.95, and that a cosine schedule is applied so the learning rate ends at 10 % of its peak value.  \n\nSources: (2.3 Optimizer, page 3).",
+            "total_time": 1.4128358364105225,
+            "timings": {
+                "retrieve": 0.515676736831665,
+                "llm": 0.8971590995788574
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 22,
+            "type": "numeric",
+            "question": "How long does training the 65B LLaMA model on 1.4T tokens take?",
+            "answer": "Answer: Training the 65B LLaMA model on 1.4 T tokens takes approximately 21 days.  \n\nExplanation: The paper states that with 2048 A100 GPUs, the 65B model processes about 380 tokens per second per GPU, and this throughput results in a total training time of roughly 21 days for the 1.4 T‑token dataset.  \n\nSources: (2.3 Optimizer, page 4).",
+            "total_time": 1.426440954208374,
+            "timings": {
+                "retrieve": 0.60595703125,
+                "llm": 0.820483922958374
+            },
+            "rank": 2,
+            "hit": true,
+            "reciprocal_rank": 0.5,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 23,
+            "type": "numeric",
+            "question": "What share of LLaMA's training data comes from English CommonCrawl?",
+            "answer": "Answer: 67 % of LLaMA’s training data comes from English CommonCrawl.  \n\nExplanation: The paper lists the data mixture percentages, and English CommonCrawl is reported as 67 % of the total training set.  \n\nSources: (2.1 Pre‑training Data, page 2)",
+            "total_time": 1.3254828453063965,
+            "timings": {
+                "retrieve": 0.5847504138946533,
+                "llm": 0.7407324314117432
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 24,
+            "type": "factual",
+            "question": "Which model does LLaMA-13B outperform on most benchmarks?",
+            "answer": "Answer: LLaMA‑13B outperforms GPT‑3 on most benchmarks.  \n\nExplanation: The paper states that LLaMA‑13B surpasses GPT‑3 (175B) on the majority of evaluated benchmarks, even though it is more than ten times smaller.  \n\nSources: (1 Introduction, page 1); (Abstract, page 1).",
+            "total_time": 1.526535987854004,
+            "timings": {
+                "retrieve": 0.7751846313476562,
+                "llm": 0.7513513565063477
+            },
+            "rank": 1,
+            "hit": true,
+            "reciprocal_rank": 1.0,
+            "correct": 1,
+            "faithful": 1
+        },
+        {
+            "id": 25,
+            "type": "unanswerable",
+            "question": "How much did it cost in US dollars to pre-train BERT?",
+            "answer": "The provided context does not contain enough information.",
+            "total_time": 0.9362072944641113,
+            "timings": {
+                "retrieve": 0.53470778465271,
+                "llm": 0.40149950981140137
+            },
+            "abstained": true
+        },
+        {
+            "id": 26,
+            "type": "unanswerable",
+            "question": "What accuracy does the Transformer get on ImageNet?",
+            "answer": "The provided context does not contain enough information.",
+            "total_time": 1.2258415222167969,
+            "timings": {
+                "retrieve": 0.5259406566619873,
+                "llm": 0.6999008655548096
+            },
+            "abstained": true
+        },
+        {
+            "id": 27,
+            "type": "unanswerable",
+            "question": "How many GPUs were used to train LLaMA-2?",
+            "answer": "The provided context does not contain enough information.",
+            "total_time": 1.2204737663269043,
+            "timings": {
+                "retrieve": 0.5197951793670654,
+                "llm": 0.6986649036407471
+            },
+            "abstained": true
+        }
+    ]
+}

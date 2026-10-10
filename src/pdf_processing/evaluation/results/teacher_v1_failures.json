@@ -1,0 +1,298 @@
+[
+    {
+        "failure": "check_evidence",
+        "id": 3,
+        "type": "factual",
+        "question": "What is the model dimension d_model in the base Transformer?",
+        "answer": "📌 Answer  \nThe base Transformer uses a model dimension \\(d_{\\text{model}} = 512\\) [page 8].\n\n📖 From the paper  \n- The base model row in Table 3 lists \\(d_{\\text{model}} = 512\\) [page 8].  \n- This value is used for both encoder and decoder embeddings and positional encodings [page 8].  \n\n🧑‍🏫 Teacher's explanation  \nThink of the Transformer as a team of workers, each worker handling a 512‑dimensional “skill set.” All workers share the same skill set size, so they can easily combine and compare information.  \n\n🔑 Key terms  \n- **\\(d_{\\text{model}}\\)**: the size of the vectors that represent tokens in the Transformer.  \n- **Base Transformer**: the standard, non‑ensemble version of the model.  \n- **Positional encoding**: added to embeddings to give the model a sense of token order.",
+        "total_time": 1.6357245445251465,
+        "timings": {
+            "retrieve": 0.5982942581176758,
+            "llm": 1.032562017440796
+        },
+        "expected": "d_model = 512.",
+        "retrieved": [
+            {
+                "page": 8,
+                "section": "5.4 Regularization",
+                "text": "[attention is all you need | 5.4 Regularization | page 8] Model BLEU Training Cost (FLOPs) EN-DE EN-FR EN-DE EN-FR ByteNet [18] 23.75 Deep-Att + PosUnk [39] 39.2 1.0 · 1020 GNMT + RL [38] 24.6 39.92 2.3 · 1019 1.4 · 1020 ConvS2S [9] 25.16 40.46 9.6 · 1018 1.5 · 1020 MoE [32] 26.03 40.56 2.0 · 1019 1"
+            },
+            {
+                "page": 8,
+                "section": "6.1 Machine Translation",
+                "text": "[attention is all you need | 6.1 Machine Translation | page 8] On the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big) in Table 2) outperforms the best previously reported models (including ensembles) by more than 2.0 BLEU, establishing a new state-of-the-art"
+            },
+            {
+                "page": 6,
+                "section": "3.5 Positional Encoding",
+                "text": "[attention is all you need | 3.5 Positional Encoding | page 6] Since our model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, we must inject some information about the relative or absolute position of the tokens in the sequence. To this en"
+            },
+            {
+                "page": 8,
+                "section": "6.2 Model Variations",
+                "text": "[attention is all you need | 6.2 Model Variations | page 8] To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the 5We used values of 2.8, 3.7, 6.0 and 9.5 TFLOPS f"
+            },
+            {
+                "page": 8,
+                "section": "5.4 Regularization",
+                "text": "[attention is all you need | 5.4 Regularization | page 8] Table 2: The Transformer achieves better BLEU scores than previous state-of-the-art models on the English-to-German and English-to-French newstest2014 tests at a fraction of the training cost. Model BLEU Training Cost (FLOPs) EN-DE EN-FR EN-D"
+            }
+        ],
+        "rank": null,
+        "hit": false,
+        "reciprocal_rank": 0,
+        "correct": 1,
+        "faithful": 1,
+        "no_contradiction": 1,
+        "clear": 1,
+        "example": 1,
+        "terms": 1
+    },
+    {
+        "failure": "retrieval_miss",
+        "id": 11,
+        "type": "factual",
+        "question": "What two tasks is BERT pre-trained on?",
+        "answer": "",
+        "total_time": 142.00133848190308,
+        "timings": {
+            "retrieve": 0.4930384159088135,
+            "llm": 141.50830006599426
+        },
+        "expected": "Masked language modeling (Masked LM) and next sentence prediction (NSP).",
+        "retrieved": [
+            {
+                "page": 3,
+                "section": "3 BERT",
+                "text": "[bert | 3 BERT | page 3] We introduce BERT and its detailed implementa- tion in this section. There are two steps in our framework: pre-training and ﬁne-tuning. Dur- ing pre-training, the model is trained on unlabeled data over different pre-training tasks. For ﬁne- tuning, the BERT model is ﬁrst in"
+            },
+            {
+                "page": 14,
+                "section": "A.4 Comparison of BERT, ELMo ,and",
+                "text": "[bert | A.4 Comparison of BERT, ELMo ,and | page 14] The core argument of this work is that the bi-directionality and the two pre- training tasks presented in Section 3.1 account for the majority of the empirical improvements, but we do note that there are several other differences between how BERT "
+            },
+            {
+                "page": 2,
+                "section": "1 Introduction",
+                "text": "[bert | 1 Introduction | page 2] Un- like Radford et al. (2018), which uses unidirec- tional language models for pre-training, BERT uses masked language models to enable pre- trained deep bidirectional representations. This is also in contrast to Peters et al. (2018a), which uses a shallow concatena"
+            },
+            {
+                "page": 4,
+                "section": "3.1 Pre-training BERT",
+                "text": "[bert | 3.1 Pre-training BERT | page 4] We compare variations of this procedure in Appendix C.2. Task #2: Next Sentence Prediction (NSP) Many important downstream tasks such as Ques- tion Answering (QA) and Natural Language Infer- ence (NLI) are based on understanding the rela- tionship between two "
+            },
+            {
+                "page": 14,
+                "section": "A.4 Comparison of BERT, ELMo ,and",
+                "text": "[bert | A.4 Comparison of BERT, ELMo ,and | page 14] In fact, many of the design decisions in BERT were intentionally made to make it as close to GPT as possible so that the two methods could be minimally compared. The core argument of this work is that the bi-directionality and the two pre- trainin"
+            }
+        ],
+        "rank": null,
+        "hit": false,
+        "reciprocal_rank": 0,
+        "correct": 0,
+        "faithful": 0,
+        "no_contradiction": 0,
+        "clear": 0,
+        "example": 0,
+        "terms": 0
+    },
+    {
+        "failure": "check_evidence",
+        "id": 13,
+        "type": "factual",
+        "question": "What tokenizer and vocabulary size does BERT use?",
+        "answer": "\"The provided context does not contain enough information.\"  \nGeneral background (not from the paper): BERT typically uses a WordPiece tokenizer with a vocabulary of around 30,000 tokens, but the exact size can vary depending on the implementation.",
+        "total_time": 17.932517528533936,
+        "timings": {
+            "retrieve": 1.8400318622589111,
+            "llm": 15.766296625137329
+        },
+        "expected": "WordPiece embeddings with a 30,000 token vocabulary.",
+        "retrieved": [
+            {
+                "page": 3,
+                "section": "3 BERT",
+                "text": "[bert | 3 BERT | page 3] Model Architecture BERT’s model architec- ture is a multi-layer bidirectional Transformer en- coder based on the original implementation de- scribed in Vaswani et al. (2017) and released in the tensor2tensor library.1 Because the use of Transformers has become common and our"
+            },
+            {
+                "page": 6,
+                "section": "4.1 GLUE",
+                "text": "[bert | 4.1 GLUE | page 6] We ﬁnd that BERT LARGE signiﬁcantly outper- forms BERTBASE across all tasks, especially those with very little training data. The effect of model size is explored more thoroughly in Section 5.2. 4.2 SQuAD v1.1 The Stanford Question Answering Dataset (SQuAD v1.1) is a colle"
+            },
+            {
+                "page": 13,
+                "section": "A.2 Pre-training Procedure",
+                "text": "[bert | A.2 Pre-training Procedure | page 13] The LM masking is applied after WordPiece tokenization with a uni- form masking rate of 15%, and no special consid- eration given to partial word pieces. We train with batch size of 256 sequences (256 sequences * 512 tokens = 128,000 tokens/batch) for 1,"
+            },
+            {
+                "page": 9,
+                "section": "5.3 Feature-based Approach with BERT",
+                "text": "[bert | 5.3 Feature-based Approach with BERT | page 9] In this section, we compare the two approaches by applying BERT to the CoNLL-2003 Named Entity Recognition (NER) task (Tjong Kim Sang and De Meulder, 2003). In the input to BERT, we use a case-preserving WordPiece model, and we include the maxim"
+            },
+            {
+                "page": 1,
+                "section": "1 Introduction",
+                "text": "[bert | 1 Introduction | page 1] The ma- jor limitation is that standard language models are unidirectional, and this limits the choice of archi- tectures that can be used during pre-training. For example, in OpenAI GPT, the authors use a left-to- right architecture, where every token can only at- t"
+            }
+        ],
+        "rank": null,
+        "hit": false,
+        "reciprocal_rank": 0,
+        "correct": 1,
+        "faithful": 1,
+        "no_contradiction": 1,
+        "clear": 1,
+        "example": 0,
+        "terms": 0
+    },
+    {
+        "failure": "check_evidence",
+        "id": 17,
+        "type": "factual",
+        "question": "What range of model sizes does LLaMA include?",
+        "answer": "📌 Answer  \nLLaMA includes models ranging from 7B to 65B parameters. [page 1]  \n\n📖 From the paper  \n- The resulting models, called LLaMA, ranges from 7B to 65B parameters with competitive performance compared to the best existing LLMs. [page 1]  \n- LLaMA-13B outperforms GPT‑3 on most benchmarks, despite being 10× smaller. [page 1]  \n\n🧑‍🏫 Teacher's explanation  \nThink of a library where each book is a model. LLaMA offers a set of books that vary in size from a small paperback (7B) to a huge hardcover (65B). The bigger the book, the more information it can hold, but you can still choose a smaller one if you need something lighter and faster.  \n\n🔑 Key terms  \n- **Parameter**: a single adjustable value in a neural network that helps it learn patterns.  \n- **B (billion)**: a unit indicating the number of parameters, e.g., 7B means 7 billion.  \n- **Model size**: the total count of parameters in a language model.",
+        "total_time": 12.77290415763855,
+        "timings": {
+            "retrieve": 0.5409348011016846,
+            "llm": 12.229927062988281
+        },
+        "expected": "From 7B to 65B parameters.",
+        "retrieved": [
+            {
+                "page": 1,
+                "section": "1 Introduction",
+                "text": "[llm paper (1) | 1 Introduction | page 1] (2022) is to determine how to best scale the dataset and model sizes for a particular training compute budget. However, this objective disregards the inference budget, which becomes critical when serving a language model at scale. In this context, given a ta"
+            },
+            {
+                "page": 1,
+                "section": "1 Introduction",
+                "text": "[llm paper (1) | 1 Introduction | page 1] (2022) recommends training a 10B model on 200B tokens, we ﬁnd that the performance of a 7B model continues to improve even after 1T tokens. The focus of this work is to train a series of language models that achieve the best possible per- formance at various"
+            },
+            {
+                "page": 7,
+                "section": "4 Instruction Finetuning",
+                "text": "[llm paper (1) | 4 Instruction Finetuning | page 7] Comparison of models of moderate size with and with- out instruction ﬁnetuning on MMLU. In Table 10, we report the results of our instruct model LLaMA-I on MMLU and compare with ex- isting instruction ﬁnetuned models of moderate sizes, namely, OPT-"
+            },
+            {
+                "page": 7,
+                "section": "3.7 Evolution of performance during training",
+                "text": "[llm paper (1) | 3.7 Evolution of performance during training | page 7] Humanities STEM Social Sciences Other Average GPT-NeoX 20B 29.8 34.9 33.7 37.7 33.6 GPT-3 175B 40.8 36.7 50.4 48.8 43.9 Gopher 280B 56.2 47.4 71.9 66.1 60.0 Chinchilla 70B 63.6 54.9 79.3 73.9 67.5 PaLM 8B 25.6 23.8 24.1 27.8 25."
+            },
+            {
+                "page": 11,
+                "section": "7 Related work",
+                "text": "[llm paper (1) | 7 Related work | page 11] For the power consumption of a A100-80GB, we take the thermal design power for NVLink systems, that is 400W. We take a PUE of 1.1 and a carbon intensity factor set at the national US average of 0.385 kg CO2e per KWh. starting from feed forward models (Bengi"
+            }
+        ],
+        "rank": null,
+        "hit": false,
+        "reciprocal_rank": 0,
+        "correct": 1,
+        "faithful": 1,
+        "no_contradiction": 1,
+        "clear": 1,
+        "example": 1,
+        "terms": 1
+    },
+    {
+        "failure": "wrong_citation",
+        "id": 28,
+        "type": "explain",
+        "question": "Why does the Transformer use multi-head attention instead of a single attention head?",
+        "answer": "📌 Answer  \nThe Transformer uses multi‑head attention so that the model can jointly attend to information from different representation subspaces at different positions; a single head would average these signals and inhibit this ability, while the computational cost remains similar. [page 5]  \n\n📖 From the paper  \n- Multi‑head attention lets the model jointly attend to information from different representation subspaces at different positions, whereas a single head would average and inhibit this. [page 5]  \n- The projections for each head use \\(d_k = d_v = d_{\\text{model}}/h = 64\\) and the total computational cost is similar to single‑head attention with full dimensionality. [page 5]  \n- The authors employ \\(h = 8\\) parallel attention layers (heads). [page 5]  \n\n🧑‍🏫 Teacher's explanation  \nThink of a single attention head like a single spotlight that can only focus on one area of a stage at a time. Multi‑head attention is like having several spotlights, each shining on a different part of the stage simultaneously. This lets the model gather more diverse information without losing detail, just as multiple spotlights give a fuller view of the performance.  \n\n🔑",
+        "total_time": 14.086998224258423,
+        "timings": {
+            "retrieve": 0.8511795997619629,
+            "llm": 13.23581862449646
+        },
+        "expected": "Key points: multiple heads let the model jointly attend to information from different representation subspaces at different positions; with a single head, averaging inhibits this; total cost is similar to single-head attention with full dimensionality.",
+        "retrieved": [
+            {
+                "page": 5,
+                "section": "3.2.2 Multi-Head Attention",
+                "text": "[attention is all you need | 3.2.2 Multi-Head Attention | page 5] With a single attention head, averaging inhibits this. MultiHead(Q, K, V) = Concat(head1, ...,headh)W O where headi = Attention(QW Q i , KWK i , V WV i ) Where the projections are parameter matricesW Q i ∈ Rdmodel×dk, W K i ∈ Rdmodel×"
+            },
+            {
+                "page": 4,
+                "section": "3.2.2 Multi-Head Attention",
+                "text": "[attention is all you need | 3.2.2 Multi-Head Attention | page 4] Instead of performing a single attention function with dmodel-dimensional keys, values and queries, we found it beneficial to linearly project the queries, keys and values h times with different, learned linear projections to dk, dk a"
+            },
+            {
+                "page": 5,
+                "section": "3.2.3 Applications of Attention in our Model",
+                "text": "[attention is all you need | 3.2.3 Applications of Attention in our Model | page 5] The Transformer uses multi-head attention in three different ways: • In \"encoder-decoder attention\" layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the"
+            },
+            {
+                "page": 2,
+                "section": "2 Background",
+                "text": "[attention is all you need | 2 Background | page 2] The goal of reducing sequential computation also forms the foundation of the Extended Neural GPU [16], ByteNet [18] and ConvS2S [9], all of which use convolutional neural networks as basic building block, computing hidden representations in paralle"
+            },
+            {
+                "page": 9,
+                "section": "6.2 Model Variations",
+                "text": "[attention is all you need | 6.2 Model Variations | page 9] We present these results in Table 3. In Table 3 rows (A), we vary the number of attention heads and the attention key and value dimensions, keeping the amount of computation constant, as described in Section 3.2.2. While single-head attenti"
+            }
+        ],
+        "rank": 2,
+        "hit": true,
+        "reciprocal_rank": 0.5,
+        "citation_correct": false,
+        "correct": 1,
+        "faithful": 1,
+        "no_contradiction": 1,
+        "clear": 1,
+        "example": 1,
+        "terms": 1
+    },
+    {
+        "failure": "wrong_citation",
+        "id": 39,
+        "type": "explain",
+        "question": "Why did LLaMA use only publicly available training data?",
+        "answer": "📌 Answer  \nLLaMA used only publicly available training data to keep the model open‑source and demonstrate that state‑of‑the‑art performance can be achieved without proprietary datasets, thereby democratizing access to large language models. [page 1]\n\n📖 From the paper  \n- The authors explicitly state that they “only use publicly available data, making our work compatible with open‑sourcing” and contrast this with models that rely on non‑public or undocumented data. [page 1]  \n- They highlight that this approach allows them to “show that it is possible to achieve state‑of‑the‑art performance by training exclusively on publicly available data, without resorting to proprietary datasets.” [page 11]  \n- The goal is to “accelerate the development of large language models” and help “improve their robustness and mitigate known issues such as toxicity and bias.” [page 11]\n\n🧑‍🏫 Teacher's explanation  \nThink of building a recipe book: if you only use ingredients that anyone can buy at a grocery store, anyone can try the recipe at home. LLaMA’s creators did the same with data—using only publicly available sources—so researchers everywhere can train and test the model without needing special, restricted datasets.\n\n🔑 Key terms  \n- **Publicly available data** – data that anyone can access without special permissions.  \n- **Open‑source** – software or models released for anyone to use, modify, and distribute.  \n- **State‑of‑the‑art performance** – achieving the best results compared to other models in the field.",
+        "total_time": 15.282055616378784,
+        "timings": {
+            "retrieve": 0.8380939960479736,
+            "llm": 14.433884859085083
+        },
+        "expected": "Key points: using only publicly available data makes the work compatible with open-sourcing, unlike models trained on proprietary or undocumented data.",
+        "retrieved": [
+            {
+                "page": 1,
+                "section": "1 Introduction",
+                "text": "[llm paper (1) | 1 Introduction | page 1] (2022) recommends training a 10B model on 200B tokens, we ﬁnd that the performance of a 7B model continues to improve even after 1T tokens. The focus of this work is to train a series of language models that achieve the best possible per- formance at various"
+            },
+            {
+                "page": 2,
+                "section": "2.1 Pre-training Data",
+                "text": "[llm paper (1) | 2.1 Pre-training Data | page 2] Our training dataset is a mixture of several sources, reported in Table 1, that cover a diverse set of do- mains. For the most part, we reuse data sources that have been leveraged to train other LLMs, with the restriction of only using data that is pu"
+            },
+            {
+                "page": 1,
+                "section": "1 Introduction",
+                "text": "[llm paper (1) | 1 Introduction | page 1] At the higher-end of the scale, our 65B-parameter model is also competitive with the best large lan- guage models such as Chinchilla or PaLM-540B. Unlike Chinchilla, PaLM, or GPT-3, we only use publicly available data, making our work com- patible with open-"
+            },
+            {
+                "page": 11,
+                "section": "8 Conclusion",
+                "text": "[llm paper (1) | 8 Conclusion | page 11] In this paper, we presented a series of language models that are released openly, and competitive with state-of-the-art foundation models. Most notably, LLaMA-13B outperforms GPT-3 while being more than 10× smaller, and LLaMA-65B is competitive with Chinchill"
+            },
+            {
+                "page": 2,
+                "section": "2.1 Pre-training Data",
+                "text": "[llm paper (1) | 2.1 Pre-training Data | page 2] We use the public GitHub dataset available on Google BigQuery. We only kept projects that are distributed under the Apache, BSD and MIT licenses. Additionally, we ﬁltered low quality ﬁles with heuristics based on the line length or proportion of alpha"
+            }
+        ],
+        "rank": 2,
+        "hit": true,
+        "reciprocal_rank": 0.5,
+        "citation_correct": false,
+        "correct": 1,
+        "faithful": 1,
+        "no_contradiction": 1,
+        "clear": 1,
+        "example": 1,
+        "terms": 1
+    }
+]
